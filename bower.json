@@ -1,0 +1,19 @@
+{
+  "name": "ui-select",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Goldinteractive/ui-select",
+  "authors": [
+    "goldinteractive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-selectric": "~1.8.4"
+  }
+}
