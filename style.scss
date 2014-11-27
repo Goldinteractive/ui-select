@@ -17,40 +17,41 @@ $select-border-radius: 0;
 /*======================================================================
 	Selectric
 ======================================================================*/
-.selectricWrapper {
-	position: relative;
-	margin: 0;
-	cursor: pointer;
-}
+.ui-select {
+	.selectricWrapper {
+		position: relative;
+		margin: 0;
+		cursor: pointer;
+	}
 
-.selectricResponsive {
-	width: 100%;
-}
+	.selectricResponsive {
+		width: 100%;
+	}
 
-.selectric {
-	border: 1px solid $select-border-color;
-	background: $select-bg-color;
-	position: relative;
-	border-radius: $select-border-radius;
-}
-.selectric .label {
-	display: block;
-	white-space: nowrap;
-	overflow: hidden;
-	margin: 0 30px 0 0;
-	padding: $select-padding-top-bottom $select-padding-left-right;
-	font-size: $select-font-size;
-	line-height: 18px;
-	color: $select-text-color;
-	min-height: 18px;
-}
-.selectric .button {
-	display: block;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 30px;
-	height: 30px;
+	.selectric {
+		border: 1px solid $select-border-color;
+		background: $select-bg-color;
+		position: relative;
+		border-radius: $select-border-radius;
+	}
+	.selectric .label {
+		display: block;
+		white-space: nowrap;
+		overflow: hidden;
+		margin: 0 30px 0 0;
+		padding: $select-padding-top-bottom $select-padding-left-right;
+		font-size: $select-font-size;
+		line-height: 18px;
+		color: $select-text-color;
+		min-height: 18px;
+	}
+	.selectric .button {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 30px;
+		height: 30px;
 	// color: #BBB;
 	// text-align: center;
 	// font: 0/0 a;
@@ -214,4 +215,4 @@ $select-border-radius: 0;
 	border-top-color: #FAFAFA;
 	cursor: default;
 }
-
+}
