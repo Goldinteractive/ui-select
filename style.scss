@@ -1,19 +1,25 @@
 @import "compass";
 
 // Colors
+$select-text-color: black;
+$select-bg-color: white;
+$select-selected-bg-color: #efefef;
+$select-border-color: #c7c5c1;
+$select-arrow-color: #060606;
 
 // Size
-
+$select-font-size: 0.813em;
+$select-padding-top-bottom: 9px;
+$select-padding-left-right: 9px;
 // Features
-
+$select-border-radius: 0;
 
 /*======================================================================
 	Selectric
 ======================================================================*/
 .selectricWrapper {
 	position: relative;
-	margin: 0 0 10px;
-	width: 300px;
+	margin: 0;
 	cursor: pointer;
 }
 
@@ -22,20 +28,20 @@
 }
 
 .selectric {
-	border: 1px solid #DDD;
-	background: #F8F8F8;
+	border: 1px solid $select-border-color;
+	background: $select-bg-color;
 	position: relative;
-	border-radius: 2px;
+	border-radius: $select-border-radius;
 }
 .selectric .label {
 	display: block;
 	white-space: nowrap;
 	overflow: hidden;
 	margin: 0 30px 0 0;
-	padding: 6px;
-	font-size: 12px;
+	padding: $select-padding-top-bottom $select-padding-left-right;
+	font-size: $select-font-size;
 	line-height: 18px;
-	color: #444;
+	color: $select-text-color;
 	min-height: 18px;
 }
 .selectric .button {
@@ -45,26 +51,51 @@
 	top: 0;
 	width: 30px;
 	height: 30px;
-	color: #BBB;
-	text-align: center;
-	font: 0/0 a;
-	/* IE Fix */
-	*font: 20px/30px Lucida Sans Unicode, Arial Unicode MS, Arial;
+	// color: #BBB;
+	// text-align: center;
+	// font: 0/0 a;
+	// /* IE Fix */
+	// *font: 20px/30px Lucida Sans Unicode, Arial Unicode MS, Arial;
+	&:before {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		right: 15px;
+		top: 13px;
+		border-style: solid;
+		border-width: 12px 12px 0 12px;
+		border-color: $select-arrow-color transparent transparent transparent;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		right: 15px;
+		width: 0;
+		height: 0;
+		top: 9px;
+		border-style: solid;
+		border-width: 12px 12px 0 12px;
+		border-color: $select-bg-color transparent transparent transparent;
+		.selectricOpen & {
+			border-color: $select-selected-bg-color transparent transparent transparent;
+		}
+	}
 }
-.selectric .button:after {
-	content: " ";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto;
-	width: 0;
-	height: 0;
-	border: 4px solid transparent;
-	border-top-color: #BBB;
-	border-bottom: none;
-}
+// .selectric .button:after {
+// 	content: " ";
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	margin: auto;
+// 	width: 0;
+// 	height: 0;
+// 	border: 4px solid transparent;
+// 	border-top-color: #BBB;
+// 	border-bottom: none;
+// }
 
 .selectricHover .selectric {
 	border-color: #CCC;
@@ -72,16 +103,16 @@
 .selectricHover .selectric .button {
 	color: #888;
 }
-.selectricHover .selectric .button:after {
-	border-top-color: #888;
-}
+// .selectricHover .selectric .button:after {
+// 	border-top-color: #888;
+// }
 
 .selectricOpen {
 	z-index: 9999;
 }
 .selectricOpen .selectric {
 	border-color: #CCC;
-	background: #F0F0F0;
+	background: $select-selected-bg-color;
 }
 .selectricOpen .selectricItems {
 	display: block;
@@ -93,9 +124,9 @@
 	cursor: default;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
-		 -moz-user-select: none;
-			-ms-user-select: none;
-					user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .selectricHideSelect {
@@ -139,9 +170,9 @@
 	top: 100%;
 	left: 0;
 	background: #F9F9F9;
-	border: 1px solid #CCC;
+	border: 1px solid $select-border-color;
 	z-index: -1;
-	box-shadow: 0 0 10px -6px;
+	// box-shadow: 0 0 10px -6px;
 }
 .selectricItems .selectricScroll {
 	height: 100%;
@@ -158,13 +189,14 @@
 	font-size: 12px;
 	line-height: 20px;
 	min-height: 20px;
+
 }
 .selectricItems li {
 	display: block;
-	padding: 5px;
+	padding: $select-padding-top-bottom $select-padding-left-right;
 	border-top: 1px solid #FFF;
-	border-bottom: 1px solid #EEE;
-	color: #666;
+	border-top: 1px solid $select-border-color;
+	color: $select-text-color;
 	cursor: pointer;
 }
 .selectricItems li.selected {
