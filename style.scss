@@ -1,18 +1,20 @@
 @import "compass";
 
 // Colors
-$select-text-color: black;
-$select-bg-color: white;
-$select-selected-bg-color: #efefef;
-$select-border-color: #c7c5c1;
-$select-arrow-color: #060606;
+$select-text-color: black !default;
+$select-bg-color: white !default;
+$select-selected-bg-color: #efefef !default;
+$select-item-bg-color: white !default;
+$select-border-color: #c7c5c1 !default;
+$select-arrow-color: #060606 !default;
 
 // Size
-$select-font-size: 0.813rem;
-$select-padding-top-bottom: 9px;
-$select-padding-left-right: 9px;
+$select-font-size: 0.813rem !default;
+$select-padding-top-bottom: 9px !default;
+$select-padding-left-right: 9px !default;
+
 // Features
-$select-border-radius: 0;
+$select-border-radius: 0 !default;
 
 /*======================================================================
 	Selectric
@@ -34,6 +36,7 @@ $select-border-radius: 0;
 	position: relative;
 	border-radius: $select-border-radius;
 }
+
 .selectric .label {
 	display: block;
 	white-space: nowrap;
@@ -45,6 +48,7 @@ $select-border-radius: 0;
 	color: $select-text-color;
 	min-height: 18px;
 }
+
 .selectric .button {
 	color: $select-bg-color;
 	display: block;
@@ -53,15 +57,16 @@ $select-border-radius: 0;
 	top: 0;
 	width: 30px;
 	height: 30px;
+	padding: 7px 0 0 0;
 	&:before {
 		content: "";
 		position: absolute;
 		width: 0;
 		height: 0;
 		right: 15px;
-		top: 13px;
+		top: 14px;
 		border-style: solid;
-		border-width: 12px 12px 0 12px;
+		border-width: 10px 10px 0 10px;
 		border-color: $select-arrow-color transparent transparent transparent;
 	}
 	&:after {
@@ -70,9 +75,9 @@ $select-border-radius: 0;
 		right: 15px;
 		width: 0;
 		height: 0;
-		top: 9px;
+		top: 11px;
 		border-style: solid;
-		border-width: 12px 12px 0 12px;
+		border-width: 10px 10px 0 10px;
 		border-color: $select-bg-color transparent transparent transparent;
 		.selectricOpen & {
 			border-color: $select-selected-bg-color transparent transparent transparent;
@@ -83,6 +88,7 @@ $select-border-radius: 0;
 .selectricHover .selectric {
 	border-color: #CCC;
 }
+
 .selectricHover .selectric .button {
 	color: #888;
 }
@@ -90,12 +96,14 @@ $select-border-radius: 0;
 .selectricOpen {
 	z-index: 9999;
 }
+
 .selectricOpen .selectric {
 	border-color: #CCC;
 	background: $select-selected-bg-color;
 }
+
 .selectricOpen .selectricItems {
-	display: block;
+	//display: block;
 }
 
 .selectricDisabled {
@@ -115,6 +123,7 @@ $select-border-radius: 0;
 	width: 0;
 	height: 0;
 }
+
 .selectricHideSelect select {
 	position: absolute;
 	left: -100%;
@@ -151,15 +160,19 @@ $select-border-radius: 0;
 	background: #F9F9F9;
 	border: 1px solid $select-border-color;
 	z-index: -1;
+	border-top: none;
 }
+
 .selectricItems .selectricScroll {
 	height: 100%;
 	overflow: auto;
 }
+
 .selectricAbove .selectricItems {
 	top: auto;
 	bottom: 100%;
 }
+
 .selectricItems ul, .selectricItems li {
 	list-style: none;
 	padding: 0;
@@ -176,20 +189,26 @@ $select-border-radius: 0;
 	border-top: 1px solid $select-border-color;
 	color: $select-text-color;
 	cursor: pointer;
+	background: $select-item-bg-color;
+	&:first-child {
+		border-top: none;
+	}
 }
+
 .selectricItems li.selected {
 	background: #EFEFEF;
 	color: #444;
 	border-top-color: #E0E0E0;
 }
+
 .selectricItems li:hover {
 	background: #F0F0F0;
 	color: #444;
 }
+
 .selectricItems li.disabled {
 	background: #F5F5F5;
 	color: #BBB;
 	border-top-color: #FAFAFA;
 	cursor: default;
 }
-
