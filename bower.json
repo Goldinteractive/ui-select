@@ -14,9 +14,6 @@
   ],
   "dependencies": {
     "jquery-selectric": "https://github.com/Goldinteractive/jQuery-Selectric.git#master",
-    "gi-scss-mixins": "~0.2.0"
-  },
-  "resolutions": {
-    "jquery-selectric": "master"
+    "gi-scss-mixins": "~0.3.0"
   }
 }

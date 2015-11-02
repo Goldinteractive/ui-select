@@ -56,6 +56,7 @@ $select-border-radius: 0 !default;
 	width: 30px;
 	height: 30px;
 	padding: 7px 0 0 0;
+
 	&:before {
 		content: "";
 		position: absolute;
@@ -67,6 +68,7 @@ $select-border-radius: 0 !default;
 		border-width: 10px 10px 0 10px;
 		border-color: $select-arrow-color transparent transparent transparent;
 	}
+
 	&:after {
 		content: "";
 		position: absolute;
@@ -77,6 +79,7 @@ $select-border-radius: 0 !default;
 		border-style: solid;
 		border-width: 10px 10px 0 10px;
 		border-color: $select-bg-color transparent transparent transparent;
+
 		.selectricOpen & {
 			border-color: $select-selected-bg-color transparent transparent transparent;
 		}
@@ -105,7 +108,7 @@ $select-border-radius: 0 !default;
 }
 
 .selectricDisabled {
-	filter: alpha(opacity=50);
+	filter: alpha(opacity = 50);
 	opacity: 0.5;
 	cursor: default;
 	-webkit-touch-callout: none;
@@ -178,8 +181,8 @@ $select-border-radius: 0 !default;
 	font-size: 12px;
 	line-height: 20px;
 	min-height: 20px;
-
 }
+
 .selectricItems li {
 	display: block;
 	padding: $select-padding-top-bottom $select-padding-left-right;
@@ -188,6 +191,7 @@ $select-border-radius: 0 !default;
 	color: $select-text-color;
 	cursor: pointer;
 	background: $select-item-bg-color;
+
 	&:first-child {
 		border-top: none;
 	}
