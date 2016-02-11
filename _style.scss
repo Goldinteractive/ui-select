@@ -303,14 +303,10 @@ $select-border-radius: 0 !default;
 .selectric-items li {
   display: block;
   padding: $select-padding-top-bottom $select-padding-left-right;
-  border-top: 1px solid #FFF;
   border-top: 1px solid $select-border-color;
   color: $select-text-color;
   background: $select-item-bg-color;
   cursor: pointer;
-  &:last-child {
-  	border-bottom: none;
-  }
 }
 .selectric-items li.selected {
   background: #EFEFEF;
@@ -326,6 +322,10 @@ $select-border-radius: 0 !default;
   background: none !important;
   color: #666 !important;
 	user-select: none;
+}
+
+.selectric-items .selectric-group {
+  border-top: 1px solid $select-border-color;
 }
 .selectric-items .selectric-group .selectric-group-label {
   font-weight: bold;

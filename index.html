@@ -16,14 +16,22 @@
 		<option value="">There</option>
 	</select>
 
+	<select class="ui-select">
+		<optgroup>
+			<option value="">Hello</option>
+			<option value="">There</option>
+		</optgroup>
+
+		<optgroup label="group 2">
+			<option value="">Hello</option>
+			<option value="">There</option>
+		</optgroup>
+	</select>
+
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/jquery-selectric/public/jquery.selectric.js"></script>
 	<script>
-		$('.ui-select').selectric({
-			animate: {
-				duration: 200
-			}
-		});
+		$('.ui-select').selectric();
 	</script>
 </body>
 </html>
