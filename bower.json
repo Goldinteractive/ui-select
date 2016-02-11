@@ -13,7 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery-selectric": "https://github.com/Goldinteractive/jQuery-Selectric.git#master",
+    "jquery-selectric": "^1.9.4",
     "gi-scss-mixins": "~0.3.0"
   }
 }
