@@ -31,7 +31,9 @@
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/jquery-selectric/public/jquery.selectric.js"></script>
 	<script>
-		$('.ui-select').selectric();
+		$('.ui-select').selectric({
+			arrowButtonMarkup: '<b class="button"></b>'
+		});
 	</script>
 </body>
 </html>
